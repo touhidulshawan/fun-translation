@@ -8,7 +8,7 @@ const Mandalorian = () => {
     <div>
       <TextField dispatch={dispatch} />
       <div>
-        {translatedContent.translated !== "" ? (
+        {translatedContent.translated ? (
           <TranslateCard {...translatedContent} />
         ) : null}
       </div>

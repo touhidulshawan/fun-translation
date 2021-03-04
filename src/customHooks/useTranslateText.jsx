@@ -14,17 +14,24 @@ export const useTranslateText = (translator) => {
   const [translatedContent, setTranslatedContent] = useState({});
 
   useEffect(() => {
-    startTranslation(translator, textToTranslate);
-  }, [translator, textToTranslate]);
-
-  const startTranslation = async (translator, text) => {
-    const response = await fetch(
-      `https://api.funtranslations.com/translate/${translator}.json?text=${text}`
-    );
-    const data = await response.json();
-    const content = await { ...data.contents };
-    setTranslatedContent(content);
-  };
+    let isActive = true;
+    const startTranslation = async () => {
+      if (textToTranslate !== "") {
+        const response = await fetch(
+          `https://api.funtranslations.com/translate/${translator}.json?text=${textToTranslate}`
+        );
+        const data = await response.json();
+        const content = await { ...data.contents };
+        if (isActive) {
+          setTranslatedContent(content);
+        }
+      }
+    };
+    startTranslation();
+    return () => {
+      isActive = false;
+    };
+  }, [textToTranslate, translator]);
 
   return [translatedContent, dispatch];
 };
