@@ -2,8 +2,8 @@ import TranslateCard from "../components/TranslateCard";
 import { useTranslateText } from "../customHooks/useTranslateText";
 import TextField from "./TextField";
 
-const Yoda = () => {
-  const [translatedContent, dispatch] = useTranslateText("yoda");
+const Valyrian = () => {
+  const [translatedContent, dispatch] = useTranslateText("valyrian");
   return (
     <div>
       <TextField dispatch={dispatch} />
@@ -15,4 +15,4 @@ const Yoda = () => {
     </div>
   );
 };
-export default Yoda;
+export default Valyrian;
