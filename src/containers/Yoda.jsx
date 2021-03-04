@@ -1,37 +1,16 @@
-import { useReducer, useState, useEffect } from "react";
+import TranslateCard from "../components/TranslateCard";
+import { useTranslateText } from "../customHooks/useTranslateText";
 import TextField from "./TextField";
 
-const textReducer = (state, action) => {
-  switch (action.type) {
-    case "ENTER_TEXT":
-      return action.payload.text;
-    default:
-      return state;
-  }
-};
-
 const Yoda = () => {
-  const [textToTranslate, dispatch] = useReducer(textReducer, "");
-  const [translatedContent, setTranslatedContent] = useState({});
-
-  useEffect(() => {
-    startTranslation(textToTranslate);
-  }, [textToTranslate]);
-
-  const startTranslation = async (text) => {
-    const response = await fetch(
-      `https://api.funtranslations.com/translate/yoda.json?text=${text}`
-    );
-    const data = await response.json();
-    const content = await { ...data.contents };
-    setTranslatedContent(content);
-  };
-
+  const [translatedContent, dispatch] = useTranslateText("yoda");
   console.log(translatedContent);
-
   return (
     <div>
       <TextField dispatch={dispatch} />
+      {Object.keys(translatedContent).length !== 0 ? (
+        <TranslateCard {...translatedContent} />
+      ) : null}
     </div>
   );
 };
