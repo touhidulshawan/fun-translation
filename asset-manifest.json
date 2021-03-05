@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/funtranslation/static/css/main.b96d3dd7.chunk.css",
+    "main.js": "/funtranslation/static/js/main.92ddd947.chunk.js",
+    "main.js.map": "/funtranslation/static/js/main.92ddd947.chunk.js.map",
+    "runtime-main.js": "/funtranslation/static/js/runtime-main.8fbd2841.js",
+    "runtime-main.js.map": "/funtranslation/static/js/runtime-main.8fbd2841.js.map",
+    "static/js/2.a3021d1f.chunk.js": "/funtranslation/static/js/2.a3021d1f.chunk.js",
+    "static/js/2.a3021d1f.chunk.js.map": "/funtranslation/static/js/2.a3021d1f.chunk.js.map",
+    "index.html": "/funtranslation/index.html",
+    "static/css/main.b96d3dd7.chunk.css.map": "/funtranslation/static/css/main.b96d3dd7.chunk.css.map",
+    "static/js/2.a3021d1f.chunk.js.LICENSE.txt": "/funtranslation/static/js/2.a3021d1f.chunk.js.LICENSE.txt",
+    "static/media/Do.9f8bdc21.png": "/funtranslation/static/media/Do.9f8bdc21.png",
+    "static/media/Mandalorian.80ebf3a7.png": "/funtranslation/static/media/Mandalorian.80ebf3a7.png",
+    "static/media/Minions.c627fdc7.png": "/funtranslation/static/media/Minions.c627fdc7.png",
+    "static/media/Shakespear.10c22517.jpg": "/funtranslation/static/media/Shakespear.10c22517.jpg",
+    "static/media/Val.9f8e9ea4.png": "/funtranslation/static/media/Val.9f8e9ea4.png",
+    "static/media/yoda.6c19dbb9.jpg": "/funtranslation/static/media/yoda.6c19dbb9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8fbd2841.js",
+    "static/js/2.a3021d1f.chunk.js",
+    "static/css/main.b96d3dd7.chunk.css",
+    "static/js/main.92ddd947.chunk.js"
+  ]
+}
